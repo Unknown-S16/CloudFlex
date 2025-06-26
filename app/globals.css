@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  padding: 0%;
+  margin: 0%;
+}
+
+
+.clip-card {
+clip-path: polygon(58.09% 93.48%, 100% 93.48%, 100% 0%, 76.84% 0%, 71.35% 7.13%, 0% 7.13%, 0% 99.75%, 51.9% 100%);
+}
+
+.clip-diagonal {
+  clip-path: polygon(-3% 0%, 103% 0%, 90% 100%, 10% 100%);
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@keyframes shine {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+.animate-shine {
+  animation: shine 6s linear infinite;
+}
+
+
+
+
